@@ -8,7 +8,7 @@ from pep_parse.settings import BASE_DIR
 class PepParsePipeline:
 
     def open_spider(self, spider):
-        self.statuses = defaultdict(lambda: 0)
+        self.statuses = defaultdict(int)
 
     def process_item(self, item, spider):
         status = item['status']
